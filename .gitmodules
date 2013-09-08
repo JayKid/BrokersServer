@@ -1,9 +1,18 @@
 [submodule "server/cookbooks/mysql"]
 	path = server/cookbooks/mysql
 	url = https://github.com/opscode-cookbooks/mysql.git
-[submodule "server/cookbooks/nginx"]
-	path = server/cookbooks/nginx
-	url = https://github.com/opscode-cookbooks/nginx.git
 [submodule "server/cookbooks/php"]
 	path = server/cookbooks/php
 	url = https://github.com/opscode-cookbooks/php.git
+[submodule "server/cookbooks/php-fpm"]
+	path = server/cookbooks/php-fpm
+	url = https://github.com/yevgenko/cookbook-php-fpm.git
+[submodule "server/cookbooks/apt"]
+	path = server/cookbooks/apt
+	url = https://github.com/opscode-cookbooks/apt.git
+[submodule "server/cookbooks/build-essential"]
+	path = server/cookbooks/build-essential
+	url = https://github.com/opscode-cookbooks/build-essential.git
+[submodule "server/cookbooks/apache2"]
+	path = server/cookbooks/apache2
+	url = https://github.com/opscode-cookbooks/apache2
