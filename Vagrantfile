@@ -63,14 +63,21 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.cookbooks_path = "cookbooks"
     chef.add_recipe "apt"
     chef.add_recipe "apache2"
-    chef.add_recipe "php-fpm"
+    chef.add_recipe "apache2::mod_php5"
     chef.add_recipe "mysql"
-    #chef.json = {
-    #  "apache" => {
-    #    "server_name" => "localhost",
-    #    "listen_address" => "0.0.0.0"
-    #  }
-    #}
+    chef.add_recipe "mysql::server"
+    chef.add_recipe "mysql::client"
+    
+    chef.json = {
+      "mysql" => {
+        "server_root_password" => "password",
+        "server_repl_password" => "password",
+        "server_debian_password" => "password"
+      },
+      "apache" => {
+        "server_name" => "localhost"
+      }
+    }
   end
 
 end
