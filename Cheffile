@@ -5,3 +5,12 @@ site 'http://community.opscode.com/api/v1'
 
 cookbook 'apt',
   :git => 'https://github.com/fnichol/chef-apt'
+cookbook 'git',
+  :git => 'https://github.com/fnichol/chef-git.git'
+cookbook 'mysql',
+  :git => 'git://github.com/opscode-cookbooks/mysql.git'
+cookbook 'apache2',
+  :git => 'git://github.com/opscode-cookbooks/apache2.git'
+cookbook 'php-fpm',
+  :git => 'git://github.com/yevgenko/cookbook-php-fpm.git'
+cookbook 'build-essential'
