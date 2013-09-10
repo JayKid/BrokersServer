@@ -2,51 +2,50 @@ SITE
   remote: http://community.opscode.com/api/v1
   specs:
     build-essential (1.4.2)
+    chef_handler (1.1.4)
+    dmg (2.0.0)
     openssl (1.1.0)
     runit (1.2.0)
       build-essential (>= 0.0.0)
       yum (>= 0.0.0)
+    windows (1.10.0)
+      chef_handler (>= 0.0.0)
     yum (2.3.2)
 
 GIT
-  remote: git://github.com/opscode-cookbooks/apache2.git
+  remote: https://github.com/opscode-cookbooks/apache2
   ref: master
-  sha: d0ae4a3f8ea355232f597b39d95a251efdb3a6bc
+  sha: 97d1a1ca279814789aa4c37247641e76815600e8
   specs:
     apache2 (1.7.0)
 
 GIT
-  remote: git://github.com/opscode-cookbooks/mysql.git
+  remote: https://github.com/opscode-cookbooks/apt
   ref: master
-  sha: 817a7a94e5fc255064539011ba20b99fe59b00be
+  sha: b58c75536300794e5b5ffa8747fc9e6c48a4e5ce
+  specs:
+    apt (2.1.1)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/git
+  ref: master
+  sha: 575a3ee5f6cafa709033c3ac39484512ad028443
+  specs:
+    git (2.6.1)
+      build-essential (>= 0.0.0)
+      dmg (>= 0.0.0)
+      runit (>= 1.0)
+      windows (>= 0.0.0)
+      yum (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/mysql
+  ref: master
+  sha: bc42cfb0d54d50e3181b40739e67e0a353650661
   specs:
     mysql (3.0.5)
       build-essential (> 1.1.0)
       openssl (>= 0.0.0)
-
-GIT
-  remote: git://github.com/yevgenko/cookbook-php-fpm.git
-  ref: master
-  sha: 7d98a4d405dbb95981f47315f672c0b69db9c296
-  specs:
-    php-fpm (0.4.6)
-      apt (>= 0.0.0)
-      yum (>= 0.0.0)
-
-GIT
-  remote: https://github.com/fnichol/chef-apt
-  ref: master
-  sha: cb998dfdeffbcbb6805527b046b411206d6c77d6
-  specs:
-    apt (1.2.0)
-
-GIT
-  remote: https://github.com/fnichol/chef-git.git
-  ref: master
-  sha: 6c19cbefcdad5ec0f62a64dae1f656d660698ea3
-  specs:
-    git (0.9.0)
-      runit (>= 0.0.0)
 
 DEPENDENCIES
   apache2 (>= 0)
@@ -54,5 +53,4 @@ DEPENDENCIES
   build-essential (>= 0)
   git (>= 0)
   mysql (>= 0)
-  php-fpm (>= 0)
 
