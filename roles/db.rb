@@ -8,8 +8,16 @@ run_list(
 
 default_attributes(
   "mysql" => {
-    "server_root_password" => "secret",
-    "server_repl_password" => "secret",
-    "server_debian_password" => "secret"
+    "server_root_password" => "secret" #,
+#    "server_repl_password" => "secret",
+#    "server_debian_password" => "secret"
+  },
+  "api" => {
+     "database" => {
+        "name" => "market"
+        "user" => "market",
+        "password" => "themarket"
+     }
   }
 )
+

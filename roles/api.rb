@@ -12,5 +12,9 @@ run_list(
 default_attributes(
   "apache" => {
     "listen_ports" => ["80", "443"]
+  },
+  "api" => {
+  	"web_dir" 	=> "/var/www/code/api/web/",
+  	"alias" 	=> "localhost"
   }
 )

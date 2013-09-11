@@ -9,6 +9,8 @@ cookbook 'git',
   :github => 'opscode-cookbooks/git'
 cookbook 'mysql',
   :github => 'opscode-cookbooks/mysql'
+cookbook 'database',
+  :github => 'opscode-cookbooks/database'
 cookbook 'apache2',
   :github => 'opscode-cookbooks/apache2'
 cookbook 'build-essential'
